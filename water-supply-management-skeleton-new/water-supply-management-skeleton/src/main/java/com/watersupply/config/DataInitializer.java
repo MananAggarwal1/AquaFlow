@@ -56,6 +56,13 @@ public class DataInitializer implements CommandLineRunner {
             System.out.println("Created operator user: operator/operator123");
         }
 
+        // Create new admin user
+        if (!userService.usernameExists("newadmin")) {
+            User newAdmin = new User("newadmin", "NewAdmin@123", "newadmin@aquaflow.com", "ADMIN");
+            userService.createUser(newAdmin);
+            System.out.println("Created new admin user: newadmin/NewAdmin@123");
+        }
+
         // Create default regular user if it doesn't exist
         if (!userService.usernameExists("user")) {
             User user = new User("user", "user123", "user@watersupply.com", "USER");

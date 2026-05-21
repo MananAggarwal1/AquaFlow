@@ -1,6 +1,9 @@
 # Maven
 target/
 *.log
+apache-maven-*/
+maven.zip
+mongodb.msi
 
 # IDEs
 .vscode/
