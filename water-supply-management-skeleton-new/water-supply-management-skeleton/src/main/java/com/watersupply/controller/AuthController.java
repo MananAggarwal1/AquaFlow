@@ -27,7 +27,7 @@ public class AuthController {
     @GetMapping("/login")
     public String showLoginForm(Model model) {
         model.addAttribute("loginRequest", new LoginRequest());
-        return "auth/login";
+        return "auth/login.html";
     }
 
     // API login moved to ApiAuthController (REST)
